@@ -1,14 +1,16 @@
-@AppName.module "<%= moduleName %>.<%= capitalizedControllerVerb %>", (<%= capitalizedControllerVerb %>, App, Backbone, Marionette, $, _)->
+@AppName.module "<%= moduleName %>.<%= capitalisedControllerVerb %>", (<%= capitalisedControllerVerb %>, App, Backbone, Marionette, $, _)->
 
 
-  class <%= capitalizedControllerVerb %>.Controller extends Marionette.Controller
+  class <%= capitalisedControllerVerb %>.Controller extends Marionette.Controller
 
     initialize: (options)->
       {model, region} = options
+
       view = @getView(model)
+      
       region.show(view)
 
 
     getView: (model)->
-      new <%= capitalizedControllerVerb %>.Item
+      new <%= capitalisedControllerVerb %>.Item
         model: model
